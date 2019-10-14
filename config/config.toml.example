@@ -8,7 +8,7 @@
   #app url
   url  = "http://localhost"
   #app 文档地址
-  doc = "./apidoc"
+  doc = "./resources/apidoc"
   addr = ":80"
   #单元测试调试信息
   debug = false

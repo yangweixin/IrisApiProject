@@ -56,7 +56,7 @@ func newApp() (api *iris.Application) {
 func main() {
 	app := newApp()
 	app.RegisterView(iris.HTML("resources", ".html"))
-	app.HandleDir("/static", "resources/static") // 设置静态资源
+	app.StaticWeb("/static", "resources/static") // 设置静态资源
 
 	addr := config.Conf.Get("app.addr").(string)
 	_ = app.Run(iris.Addr(addr), iris.WithoutServerError(iris.ErrServerClosed))
